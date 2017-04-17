@@ -64,11 +64,25 @@ def primes():     #定义生成器，不断返回下一个函数
 		yield n
 		it=filter(shaixuan(n),it)
 
-for x in primes():
+for x in primes():    #对于无限序列需要有退出序列的循环
 	if x<1000:
 		print(x)
 	else:
 		break
 
 
+#判断是否为回数
 
+def a(n):
+	return str(n)==str(n)[::-1]
+L=list(filter(a,range(1000)))
+print (L)
+
+
+#sorted 函数的用法-----高阶函数的强大抽象能力
+
+print (sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower, reverse=True))
+#key是作用于每一个项的函数，然后在进行排列
+#reverse是正反向排序的参数
+
+#isinstance(对象，数据类型)----来判断数据类型----True/False
