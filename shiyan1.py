@@ -86,3 +86,6 @@ print (sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower, reverse=True))
 #reverse是正反向排序的参数
 
 #isinstance(对象，数据类型)----来判断数据类型----True/False
+#Interable----可迭代对象
+#Iterator----迭代器----可以被next()函数调用的对象
+#这是一种数据流，全体长度是未知的,有可能是一个函数
