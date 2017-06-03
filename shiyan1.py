@@ -89,3 +89,18 @@ print (sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower, reverse=True))
 #Interable----可迭代对象
 #Iterator----迭代器----可以被next()函数调用的对象
 #这是一种数据流，全体长度是未知的,有可能是一个函数
+
+
+def b(*args):
+	def c():
+		ax=0
+		for n in args:
+			ax=ax+n
+		return ax
+	return c       #返回函数在return时返回自己
+f=b(1,2,3,4,5)
+
+
+print (f)          #调用时输入变量，然后用f来输出
+print (f())
+
