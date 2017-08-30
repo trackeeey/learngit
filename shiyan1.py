@@ -105,3 +105,9 @@ print (f)          #调用时输入变量，然后用f来输出
 print (f())
 print (f)
 
+print('ABC'.encode('ascii'))
+print('中文'.encode('utf-8'))
+#纯英文的str可以用ASCII编码为bytes，内容是一样的
+#含有中文的str可以用UTF-8编码为bytes
+#含有中文的str无法用ASCII编码
+#因为中文编码的范围超过了ASCII编码的范围，Python会报错
